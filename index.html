@@ -7,23 +7,33 @@
 </head>
 
 <body>
+<!--1. empty div -->
 <div id="root"></div>
 
-    <!--React-->
+<!--2. React-->
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js" ></script>
-<!--React Dom-->
+<!--3. React Dom-->
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" ></script>
 <!--Babel-->
 <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <script type="text/babel">
-    let element = <h1>Hello, JSX</h1>;
 
+    let name = "Alan"
+    // 4. React Element
+    let element = (
+        <div>
+            <h1>Hello, {name +'!'} (YES JSX)</h1>
+            <button>click me</button>
+        </div>
+    )
+    
+    // 5. Actual Render to the page
     ReactDOM.render(
         element,
         document.getElementById('root')
     );
-    
+
 </script>
 </body>
 </html>
